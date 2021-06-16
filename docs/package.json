@@ -1,0 +1,25 @@
+{
+  "name": "todo-docs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "vitepress dev . --host",
+    "build": "vitepress build .",
+    "preview": "vitepress serve ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/heicore/todo-docs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/heicore/todo-docs/issues"
+  },
+  "homepage": "https://github.com/heicore/todo-docs#readme",
+  "devDependencies": {
+    "vitepress": "^0.14.0"
+  }
+}
