@@ -2,7 +2,7 @@
 
 [visit online demo](https://todo-vue3-kappa.vercel.app/)
 
-![vue3](../vue3.png)
+![vue3](/vue3.png)
 
 开发环境：
 

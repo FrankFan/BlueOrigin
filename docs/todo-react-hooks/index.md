@@ -2,7 +2,7 @@
 
 [visit online demo](http://todo-react-hooks-woad.vercel.app/)
 
-![hooks](../react-hooks.png)
+![hooks](/react-hooks.png)
 
 ## 注意点
 

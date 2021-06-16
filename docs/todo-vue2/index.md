@@ -2,7 +2,7 @@
 
 [visit online demo](https://todo-vue2-gamma.vercel.app/)
 
-![img](../vue2.png)
+![vue2](/vue2.png)
 
 ## 开发环境
 

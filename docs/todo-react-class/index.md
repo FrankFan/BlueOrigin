@@ -2,7 +2,7 @@
 
 [visit online demo](http://todo-react-hooks-woad.vercel.app/)
 
-![vue3](../react-class.png)
+![react-class](/react-class.png)
 
 ## 注意点
 
