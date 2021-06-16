@@ -1,6 +1,6 @@
 # todo-react-class
 
-[visit online demo](http://todo-react-hooks-woad.vercel.app/)
+[visit online](https://todo-class.surge.sh/)
 
 ![react-class](/react-class.png)
 

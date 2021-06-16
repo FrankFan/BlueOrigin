@@ -2,7 +2,7 @@
 
 ## 一、最终效果
 
-![final](/hero.png))
+![final](/hero.png)
 
 ## 二、需求分析
 

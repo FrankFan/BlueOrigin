@@ -1,6 +1,6 @@
 # todo-vue3
 
-[visit online demo](https://todo-vue3-kappa.vercel.app/)
+[visit online](https://todo-vue3-chi.vercel.app/)
 
 ![vue3](/vue3.png)
 

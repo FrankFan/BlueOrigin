@@ -1,6 +1,6 @@
 # todo-react-hooks
 
-[visit online demo](http://todo-react-hooks-woad.vercel.app/)
+[visit online](https://todo-hooks.surge.sh/)
 
 ![hooks](/react-hooks.png)
 
