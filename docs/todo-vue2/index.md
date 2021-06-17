@@ -2,7 +2,7 @@
 
 [visit online](https://todo-vue2-sage.vercel.app/)
 
-![vue2](/vue2.png)
+![vue2](/images/vue2.png)
 
 ## 开发环境
 

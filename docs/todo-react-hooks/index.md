@@ -2,7 +2,7 @@
 
 [visit online](https://todo-hooks.surge.sh/)
 
-![hooks](/react-hooks.png)
+![hooks](/images/react-hooks.png)
 
 ## 注意点
 

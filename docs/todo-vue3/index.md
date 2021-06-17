@@ -2,7 +2,7 @@
 
 [visit online](https://todo-vue3-chi.vercel.app/)
 
-![vue3](/vue3.png)
+![vue3](/images/vue3.png)
 
 开发环境：
 

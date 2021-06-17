@@ -2,7 +2,7 @@
 
 [visit online](https://todo-class.surge.sh/)
 
-![react-class](/react-class.png)
+![react-class](/images/react-class.png)
 
 ## 注意点
 
