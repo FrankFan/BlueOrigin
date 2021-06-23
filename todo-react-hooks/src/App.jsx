@@ -22,12 +22,7 @@ function App() {
   useEffect(() => {
     function hashchangeHandler() {
       const visibility = getHash() || 'all';
-      if (filter[visibility]) {
-        setVisibility(visibility);
-      } else {
-        window.location.hash = '';
-        setVisibility('all');
-      }
+      setVisibility(visibility);
     }
     window.addEventListener('hashchange', hashchangeHandler);
   }, []);
@@ -202,55 +197,52 @@ function App() {
             })}
           </ul>
         </section>
-        {filteredTodos.length > 0 ? (
-          <footer className='footer'>
-            <span className='todo-count'>
-              <strong>{remaining}</strong> {pluralize('item', remaining)} left
-            </span>
-            <ul className='filters'>
-              <li>
-                <a
-                  className={classNames({
-                    selected: visibility === 'all',
-                  })}
-                  href='#/all'
-                >
-                  All
-                </a>
-              </li>
-              <li>
-                <a
-                  className={classNames({
-                    selected: visibility === 'active',
-                  })}
-                  href='#/active'
-                >
-                  Active
-                </a>
-              </li>
-              <li>
-                <a
-                  className={classNames({
-                    selected: visibility === 'completed',
-                  })}
-                  href='#/completed'
-                >
-                  Completed
-                </a>
-              </li>
-            </ul>
-            {/* <!-- Hidden if no completed items are left ↓ --> */}
-            {todos.length > remaining ? (
-              <button className='clear-completed' onClick={removeCompleted}>
-                Clear Completed
-              </button>
-            ) : null}
-          </footer>
-        ) : null}
+        <footer className='footer'>
+          <span className='todo-count'>
+            <strong>{remaining}</strong> {pluralize('item', remaining)} left
+          </span>
+          <ul className='filters'>
+            <li>
+              <a
+                className={classNames({
+                  selected: visibility === 'all',
+                })}
+                href='#/all'
+              >
+                All
+              </a>
+            </li>
+            <li>
+              <a
+                className={classNames({
+                  selected: visibility === 'active',
+                })}
+                href='#/active'
+              >
+                Active
+              </a>
+            </li>
+            <li>
+              <a
+                className={classNames({
+                  selected: visibility === 'completed',
+                })}
+                href='#/completed'
+              >
+                Completed
+              </a>
+            </li>
+          </ul>
+          {/* <!-- Hidden if no completed items are left ↓ --> */}
+          {todos.length > remaining ? (
+            <button className='clear-completed' onClick={removeCompleted}>
+              Clear Completed
+            </button>
+          ) : null}
+        </footer>
       </section>
       <footer className='info'>
         <p>Double-click to edit a todo</p>
-        {/* <!-- Remove the below line ↓ --> */}
         <p>
           Template by
           <a href='http://sindresorhus.com'> Sindre Sorhus</a>
