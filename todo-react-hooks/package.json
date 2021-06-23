@@ -3,7 +3,8 @@
   "scripts": {
     "start": "npm run dev",
     "dev": "vite --host",
-    "build": "vite build",
+    "build": "vite build && cp CNAME dist",
+    "deploy": "npm run build && surge dist",
     "serve": "vite preview"
   },
   "dependencies": {
