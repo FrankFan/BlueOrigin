@@ -47,23 +47,10 @@ export const completeAllTodos = (todos) => {
   };
 };
 
-export const toggleAllTodos = (checked) => {
+export const toggleAllTodos = (todos) => {
+  console.log(todos);
   return {
     type: 'TOGGLE_ALL',
-    payload: checked,
-  };
-};
-
-export const setRemaining = (remaining) => {
-  return {
-    type: 'SET_REMAINING',
-    payload: remaining,
-  };
-};
-
-export const setVisibility = (visibility) => {
-  return {
-    type: 'SET_VISIBILITY',
-    payload: visibility,
+    payload: [...todos],
   };
 };

@@ -1,4 +1,4 @@
-export function getMaxId(arr = []) {
+export function getMaxId(arr) {
   let maxId = 0;
   arr.forEach((item) => {
     if (+item.id > +maxId) {
@@ -13,5 +13,5 @@ export function pluralize(word, count) {
 }
 
 export function getHash() {
-  return window.location.hash.replace(/#\/?/, '') || 'all';
+  return window.location.hash.replace(/#\/?/, '');
 }
