@@ -9,7 +9,7 @@ function AddTodo({ addTodo }) {
 
   return (
     <header className='header'>
-      <h1>React Redux</h1>
+      <h1>Hooks Redux</h1>
       <input
         autoFocus
         autoComplete='off'

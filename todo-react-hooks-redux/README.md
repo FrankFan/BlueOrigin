@@ -33,3 +33,16 @@
 `import {connect} from 'react-redux';`
 
 <http://cn.redux.js.org/docs/react-redux/>
+
+## 实现过程
+
+由于使用了 Redux，就可以划分组件开发了，跨组件通信通过使用 store 就可以了，合理的划分 reducer 可以减少很多工作量。
+
+此外，在纯 hooks 版本和纯 class API 版本中，保存数据需要手动多次调用 `todoStorage.save()` 方法，稍显重复。但是有了 store 以后，就可以很轻松的订阅 store 的变化事件，在回调函数中调用一次`todoStorage.save()`即可。
+
+```js
+store.subscribe(() => {
+  const { todos } = store.getState();
+  todoStorage.save(todos);
+});
+```

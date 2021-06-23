@@ -1,4 +1,4 @@
-const STORAGE_KEY = 'todos-react-class-redux';
+const STORAGE_KEY = 'todos-react-hooks-redux';
 
 export default {
   fetch() {
