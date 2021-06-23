@@ -25,6 +25,9 @@ class App extends React.Component {
   }
 
   componentDidMount() {
+    this.setState({
+      visibility: getHash() || 'all',
+    });
     window.addEventListener('hashchange', () => {
       const visibility = getHash() || 'all';
       this.setState({
@@ -263,52 +266,50 @@ class App extends React.Component {
               })}
             </ul>
           </section>
-          {renderedTodos.length > 0 ? (
-            <footer className='footer'>
-              <span className='todo-count'>
-                <strong>{remaining}</strong> {pluralize('item', remaining)} left
-              </span>
-              <ul className='filters'>
-                <li>
-                  <a
-                    className={classNames({ selected: visibility === 'all' })}
-                    href='#/all'
-                  >
-                    All
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className={classNames({
-                      selected: visibility === 'active',
-                    })}
-                    href='#/active'
-                  >
-                    Active
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className={classNames({
-                      selected: visibility === 'completed',
-                    })}
-                    href='#/completed'
-                  >
-                    Completed
-                  </a>
-                </li>
-              </ul>
-              {/* Hidden if no completed items are left ↓ */}
-              {todos.length > remaining ? (
-                <button
-                  onClick={this.removeCompleted}
-                  className='clear-completed'
+          <footer className='footer'>
+            <span className='todo-count'>
+              <strong>{remaining}</strong> {pluralize('item', remaining)} left
+            </span>
+            <ul className='filters'>
+              <li>
+                <a
+                  className={classNames({ selected: visibility === 'all' })}
+                  href='#/all'
                 >
-                  Clear completed
-                </button>
-              ) : null}
-            </footer>
-          ) : null}
+                  All
+                </a>
+              </li>
+              <li>
+                <a
+                  className={classNames({
+                    selected: visibility === 'active',
+                  })}
+                  href='#/active'
+                >
+                  Active
+                </a>
+              </li>
+              <li>
+                <a
+                  className={classNames({
+                    selected: visibility === 'completed',
+                  })}
+                  href='#/completed'
+                >
+                  Completed
+                </a>
+              </li>
+            </ul>
+            {/* Hidden if no completed items are left ↓ */}
+            {todos.length > remaining ? (
+              <button
+                onClick={this.removeCompleted}
+                className='clear-completed'
+              >
+                Clear completed
+              </button>
+            ) : null}
+          </footer>
         </section>
         <footer className='info'>
           <p>Double-click to edit a todo</p>
