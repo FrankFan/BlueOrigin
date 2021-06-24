@@ -2,4 +2,4 @@
 
 [document](https://todo-docs.vercel.app/)
 
-![img](https://todo-docs.vercel.app/hero.png)
+![img](https://todo-docs.vercel.app/images/hero.png)
