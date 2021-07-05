@@ -1,5 +1,3 @@
-const pkg = require('../package.json');
-
 module.exports = {
   title: 'TodoApp',
   description: '带你玩转TodoApp',
@@ -11,10 +9,15 @@ module.exports = {
       { text: 'vue3版', link: '/todo-vue3/' },
       { text: 'react-class版', link: '/todo-react-class/' },
       { text: 'react-hooks版', link: '/todo-react-hooks/' },
+      { text: 'Github', link: 'https://github.com/FrankFan/BlueOrigin' },
     ],
-    sidebar: {
-      '/todo-vue2/': 'auto',
-      '/todo-vue3/': 'auto',
+  },
+  // 扩展 markdown
+  markdown: {
+    lineNumbers: true,
+    // use more markdown-it plugins!
+    config: (md) => {
+      md.use(require('markdown-it-task-lists'), { enable: true });
     },
   },
 };

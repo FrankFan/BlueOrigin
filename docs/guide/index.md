@@ -24,7 +24,7 @@
 - [todo-react-hooks](../todo-react-hooks/)
 - [todo-react-class](../todo-react-class/)
 
-### feature list
+### 1. 需求描述
 
 根据 todoMVC 项目的规定，实现一个 `todo` 应用需要实现以下功能：
 
@@ -53,7 +53,7 @@
 
    - 1. 需要显示 `active` 状态的 todo 项目
    - 2. 确保数字用 `strong` 标签包起来
-   - 3. 确保使用正确的单复树：`1 item, 2 items`
+   - 3. 确保使用正确的单复数：`1 item, 2 items`
 
 8. 持久化
 
@@ -73,7 +73,43 @@
    - 4. 当路由改变时 `todolist` 应该同步改变
    - 5. 一种特殊情况：如果有 `todo item` 处于编辑状态时切换路由，应该先保存在切换。
 
-### HTML 结构模板
+### 2. 需求列表
+
+- [x] 添加任务
+
+  - [ ] 输入框正常输入任务文字
+
+- [x] 删除任务
+
+  - [ ] 删除一条
+
+  - [ ] 设为已完成状态
+
+  - [ ] 一键标记所有任务状态切换
+
+- [x] 修改任务
+
+  - [ ] 更新单个任务完成状态
+
+  - [ ] 双击编辑修改任务
+
+  - [ ] ESC 退出修改任务
+
+  - [ ] blur 保存修改任务
+
+- [x] 正常渲染任务列表
+
+  - [ ] 任务存储在本地缓存 `localStorage` 中
+
+- [x] 路由分类切换
+
+  - [ ] 一键清除所有已完成任务
+
+- [ ] 正常渲染底部统计区域
+
+- [ ] 数据分类统计
+
+### 3. HTML 结构模板
 
 ```html
 <section class="todoapp">
@@ -84,6 +120,18 @@
 <footer class="info"></footer>
 ```
 
-### CSS 模板
+### 4. CSS 模板
 
 使用这个库 [todomvc-app-css](https://github.com/tastejs/todomvc-app-css/blob/master/index.css)
+
+### 5. JS 逻辑
+
+```js
+addTodo();
+
+removeTodo();
+
+editTodo();
+
+// ... and more
+```
